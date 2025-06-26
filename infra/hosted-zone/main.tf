@@ -8,7 +8,7 @@ data "aws_route53_zone" "dev_proj_1_mosamfarms_com" {
 }
 
 resource "aws_route53_record" "lb_record" {
-  zone_id = data.aws_route53_zone.dev_proj_1_.zone_id
+  zone_id = data.aws_route53_zone.dev_proj_1_mosamfarms_com.zone_id
   name    = var.domain_name
   type    = "A"
 
